@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/duitku-app/static/css/main.737edb78.css",
-    "main.js": "/duitku-app/static/js/main.630b890f.js",
-    "static/js/787.88e1c13d.chunk.js": "/duitku-app/static/js/787.88e1c13d.chunk.js",
-    "index.html": "/duitku-app/index.html",
-    "main.737edb78.css.map": "/duitku-app/static/css/main.737edb78.css.map",
-    "main.630b890f.js.map": "/duitku-app/static/js/main.630b890f.js.map",
-    "787.88e1c13d.chunk.js.map": "/duitku-app/static/js/787.88e1c13d.chunk.js.map"
+    "main.css": "/duitku-app.github.io/static/css/main.737edb78.css",
+    "main.js": "/duitku-app.github.io/static/js/main.071db705.js",
+    "static/js/787.88e1c13d.chunk.js": "/duitku-app.github.io/static/js/787.88e1c13d.chunk.js",
+    "index.html": "/duitku-app.github.io/index.html",
+    "main.737edb78.css.map": "/duitku-app.github.io/static/css/main.737edb78.css.map",
+    "main.071db705.js.map": "/duitku-app.github.io/static/js/main.071db705.js.map",
+    "787.88e1c13d.chunk.js.map": "/duitku-app.github.io/static/js/787.88e1c13d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.737edb78.css",
-    "static/js/main.630b890f.js"
+    "static/js/main.071db705.js"
   ]
 }
