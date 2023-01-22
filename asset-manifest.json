@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/duitku-app/static/css/main.737edb78.css",
+    "main.js": "/duitku-app/static/js/main.630b890f.js",
+    "static/js/787.88e1c13d.chunk.js": "/duitku-app/static/js/787.88e1c13d.chunk.js",
+    "index.html": "/duitku-app/index.html",
+    "main.737edb78.css.map": "/duitku-app/static/css/main.737edb78.css.map",
+    "main.630b890f.js.map": "/duitku-app/static/js/main.630b890f.js.map",
+    "787.88e1c13d.chunk.js.map": "/duitku-app/static/js/787.88e1c13d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.737edb78.css",
+    "static/js/main.630b890f.js"
+  ]
+}
