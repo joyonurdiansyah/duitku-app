@@ -24,12 +24,6 @@ class App extends React.Component {
           category: "IN",
         },
         {
-          deskripsi: "Menerima Gaji 2",
-          tanggal: "24 Januari 2022",
-          nominal: 3000000,
-          category: "IN",
-        },
-        {
           deskripsi: "Makan nasi padang",
           tanggal: "15 Januari 2022",
           nominal: 20000,
@@ -39,20 +33,34 @@ class App extends React.Component {
     };
 
     this.tambahItem = this.tambahItem.bind(this);
+    this.fnHitung = this.fnHitung.bind(this);
   }
 
   tambahItem(objek){
     // console.table(objek)
-    this.setState({
-      summary : [ ...this.state.summary, objek ]
-    })
+   let newData = [...this.state.summary, objek]
+   let dataUangIN = newData.filter((item)=> item.category === 'IN' );
+   let nominalUang = dataUangIN.map((item)=> item.nominal);
+   let jumlahUangIN = nominalUang.reduce((total, num)=> total + num);
+   let dataUangOUT = newData.filter((item)=> item.category === 'OUT' );
+   let nominalUangOUT = dataUangOUT.map((item)=> item.nominal);
+   let jumlahUangOUT = nominalUangOUT.reduce((total, num)=> total + num);
+
+   this.setState({
+    pemasukanUang : jumlahUangIN,
+    transaksiIN : nominalUang.length,
+    pengeluaranUang : jumlahUangOUT,
+    transaksiOUT : nominalUangOUT.length,
+    sisaUang : jumlahUangIN - jumlahUangOUT,
+    persentaseUang : (jumlahUangIN - jumlahUangOUT)/jumlahUangIN * 100,
+    summary : newData
+  })
   }
 
-  componentDidMount() {
+  fnHitung() {
     let dataUangIN = this.state.summary.filter((item)=> item.category === 'IN' );
     let nominalUang = dataUangIN.map((item)=> item.nominal);
     let jumlahUangIN = nominalUang.reduce((total, num)=> total + num);
-    
     let dataUangOUT = this.state.summary.filter((item)=> item.category === 'OUT' );
     let nominalUangOUT = dataUangOUT.map((item)=> item.nominal);
     let jumlahUangOUT = nominalUangOUT.reduce((total, num)=> total + num);
@@ -65,6 +73,10 @@ class App extends React.Component {
       sisaUang : jumlahUangIN - jumlahUangOUT,
       persentaseUang : (jumlahUangIN - jumlahUangOUT)/jumlahUangIN * 100
     })
+  }
+
+  componentDidMount() {
+    this.fnHitung()
   }
 
   render() {
